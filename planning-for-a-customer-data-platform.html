@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planning for a Customer Data Platform — Prabir Bera</title>
+  <meta name="description" content="A practical framework for planning a customer data platform around business outcomes, identity, activation, governance and phased delivery.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d2237'/%3E%3Cpath d='M14 15h22c10 0 16 5 16 14 0 6-3 10-9 12 6 2 9 6 9 12H40c0-5-3-7-9-7h-5v7H14V15zm12 10v12h8c4 0 6-2 6-6s-2-6-6-6h-8z' fill='%23ffbd34'/%3E%3C/svg%3E">
+  <style>
+    :root{--bg:#17152f;--deep:#0d0b1f;--panel:#211d3e;--paper:#f1edff;--ink:#f8f7fc;--muted:#aaa4bf;--violet:#8f67ff;--pink:#ffb9d6;--cyan:#78d9f3;--line:rgba(255,255,255,.15)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.topbar{height:90px;background:rgba(10,8,24,.96);border-bottom:1px solid rgba(255,255,255,.1);position:sticky;top:0;z-index:20;backdrop-filter:blur(18px)}.topbar:before{content:"MARKETING TECHNOLOGY  •  CUSTOMER DATA  •  PRACTICAL AI";position:absolute;inset:0 0 auto;height:5px;overflow:hidden;background:linear-gradient(90deg,#6e43ed,#d45dca,#78d9f3);color:transparent}.topbar-inner{height:100%;max-width:1320px;margin:auto;padding:0 clamp(22px,5.5vw,86px);display:flex;align-items:center}.brand-logo{display:block;width:116px;height:auto}.back{margin-left:auto;text-transform:uppercase;font-size:.78rem;font-weight:700;letter-spacing:.06em;color:#c7c2d8}.back:hover{color:var(--pink)}
+    .hero{min-height:620px;padding:125px clamp(22px,8vw,130px) 105px;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:radial-gradient(circle at 77% 22%,rgba(209,119,206,.62),transparent 15%),linear-gradient(145deg,#5221bd,#17152f 62%)}.hero:before,.hero:after{content:"";position:absolute;left:-8%;right:-8%;height:1px;top:42%;background:rgba(255,255,255,.32);transform:rotate(-7deg);box-shadow:0 52px 0 rgba(255,255,255,.14),0 -52px 0 rgba(255,255,255,.13)}.hero:after{top:77%;opacity:.35;transform:rotate(4deg)}.hero-content{position:relative;z-index:1;max-width:1000px}.eyebrow{color:#d4bffc;text-transform:uppercase;letter-spacing:.1em;font-size:.83rem;font-weight:700}.hero h1{margin:20px 0 25px;max-width:920px;font-size:clamp(3.3rem,7vw,7.2rem);line-height:.96;letter-spacing:-.065em;font-weight:600}.meta{color:#c2bcd4;font-size:.94rem}
+    .article{max-width:880px;margin:auto;padding:105px 24px 120px}.standfirst{font-size:clamp(1.35rem,2.4vw,2rem);line-height:1.5;color:#ddd7ef;margin:0 0 70px}.article h2{margin:72px 0 18px;font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.04em}.article h3{margin:38px 0 10px;font-size:1.35rem}.article p,.article li{color:#c6c0d7;font-size:1.08rem}.article strong{color:#fff}.article ul,.article ol{padding-left:1.35rem}.article li{margin:10px 0}.callout{margin:55px 0;padding:34px 36px;border-left:4px solid var(--pink);background:linear-gradient(135deg,rgba(143,103,255,.16),rgba(255,185,214,.06));border-radius:0 16px 16px 0}.callout p{margin:0;color:#f1edf9;font-size:1.28rem}.framework{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:38px 0}.framework div{padding:26px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.035)}.framework span{display:block;margin-bottom:7px;color:var(--violet);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.framework strong{font-size:1.12rem}.article-end{margin-top:85px;padding-top:32px;border-top:1px solid var(--line);color:var(--muted)}.cta{margin:0;background:var(--paper);color:#17152f;padding:85px 24px;text-align:center}.cta h2{margin:0 0 24px;font-size:clamp(2.3rem,5vw,4.5rem);line-height:1}.button{display:inline-flex;padding:17px 26px;border-radius:9px;background:#6338df;color:#fff;text-transform:uppercase;font-size:.82rem;font-weight:700;box-shadow:0 14px 40px rgba(99,56,223,.3)}.footer{background:#0a0818;color:#817c94;text-align:center;padding:42px 20px}
+    @media(max-width:700px){.topbar{height:72px}.topbar-inner{height:72px}.brand-logo{width:102px}.hero{min-height:540px;padding:100px 24px 75px}.hero h1{font-size:3.55rem}.article{padding-top:75px}.framework{grid-template-columns:1fr}.callout{padding:27px 25px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="topbar-inner"><a href="index.html"><img class="brand-logo" src="assets/prabir-logo.png" alt="Prabir"></a><a class="back" href="index.html#articles">← All articles</a></div></header>
+  <main>
+    <section class="hero">
+      <div class="hero-content"><div class="eyebrow">Case Study · CDP · MarTech · Strategic View</div><h1>Planning for a Customer Data Platform</h1><div class="meta">Prabir Bera · September 2026 · 8 min read</div></div>
+    </section>
+    <article class="article">
+      <p class="standfirst">A Customer Data Platform should not begin with a platform comparison. It should begin with a clear customer problem, a useful decision the business needs to make, and an activation that can improve the customer experience.</p>
+
+      <p>CDP programmes often start with an attractive promise: connect every source, create a single customer view and personalize every interaction. The ambition is valid. The problem is that it can quickly turn into a large technology exercise without a clear path to business value.</p>
+
+      <p>My preferred approach is more practical. Start with a narrow outcome, identify the minimum data required to support it, design identity and consent deliberately, and prove the complete journey from collection to activation. Then expand.</p>
+
+      <div class="callout"><p><strong>The first CDP question is not “Which platform should we buy?” It is “Which customer or business decision are we currently unable to make?”</strong></p></div>
+
+      <h2>1. Start with the outcome</h2>
+
+      <p>Before discussing sources, schemas or identity graphs, define the problem in business language. A useful starting use case might be reducing abandoned checkouts, suppressing recent purchasers from acquisition campaigns, identifying high-intent visitors, or improving lifecycle communication.</p>
+
+      <p>Each use case should have four parts:</p>
+
+      <div class="framework">
+        <div><span>Audience</span><strong>Who needs a different experience?</strong></div>
+        <div><span>Signal</span><strong>Which behaviour or attribute tells us that?</strong></div>
+        <div><span>Action</span><strong>What will the business do differently?</strong></div>
+        <div><span>Measure</span><strong>How will we know it worked?</strong></div>
+      </div>
+
+      <p>This keeps the programme grounded. “Build Customer 360” is not a use case. “Recognize customers who browsed repeatedly but have not purchased, then activate a relevant audience in the engagement platform” is.</p>
+
+      <h2>2. Map the journey before the systems</h2>
+
+      <p>A source inventory is necessary, but it is more useful when it follows the customer journey. Map the important moments first: discovery, product interaction, registration, purchase, service and retention. Then identify where each interaction is currently recorded.</p>
+
+      <p>For an ecommerce and retail scenario, the landscape could include:</p>
+
+      <ul>
+        <li>Website and ecommerce behaviour collected in real time.</li>
+        <li>Offline transactions arriving from a warehouse or point-of-sale process.</li>
+        <li>Marketplace orders received through APIs or batch files.</li>
+        <li>Customer service and account information from a CRM.</li>
+      </ul>
+
+      <p>The goal is not to ingest everything. It is to identify the events and attributes that support the selected use cases. Collecting unused data increases cost, governance effort and ambiguity.</p>
+
+      <h2>3. Treat identity as a product decision</h2>
+
+      <p>Identity resolution is where an apparently simple implementation becomes a business decision. A visitor may begin anonymously, later log in, purchase using an email address and contact support under a CRM identifier. The CDP needs a controlled way to connect those interactions without creating false matches.</p>
+
+      <p>A sensible identity plan defines:</p>
+
+      <ul>
+        <li>Which identifier is created for anonymous behaviour.</li>
+        <li>When a known customer identifier becomes available.</li>
+        <li>Which identifiers are trusted and which are only supporting signals.</li>
+        <li>How profile merges, duplicates and corrections will be handled.</li>
+        <li>How consent and purpose limitations affect collection and activation.</li>
+      </ul>
+
+      <p>The objective is not the maximum possible match rate. It is a reliable level of customer continuity that the business can explain and govern.</p>
+
+      <h2>4. Design the activation path early</h2>
+
+      <p>A CDP creates value when its data changes an experience or decision. That means destinations should be planned alongside sources—not at the end of the project.</p>
+
+      <p>For every audience, specify its destination, refresh expectation, eligibility rules, exclusions and owner. A real-time website use case may require seconds. A paid-media suppression list might only require a daily update. The architecture should reflect the use case instead of applying “real time” everywhere.</p>
+
+      <p>This also exposes practical dependencies early: Does the destination accept the required identifiers? Can audience membership be removed as well as added? How will consent be honoured? Who is responsible when activation numbers differ between systems?</p>
+
+      <h2>5. Create a tracking plan that people can operate</h2>
+
+      <p>A tracking plan is more than a list of events. It is a contract between product, marketing, analytics and engineering.</p>
+
+      <p>For each event, document its business definition, trigger, required properties, naming convention, owner, validation rules and downstream consumers. “Product Viewed” should mean the same thing to the website team, the CDP, the analytics platform and the campaign team.</p>
+
+      <p>Implementation evidence matters too. Validate the browser event, the network request, the CDP debugger, the mapped profile and the destination. A tag firing successfully is only one checkpoint; it does not prove that trustworthy data reached its intended use.</p>
+
+      <h2>6. Build governance into the design</h2>
+
+      <p>Governance should not be a review added after implementation. It belongs in the event and audience design.</p>
+
+      <p>At minimum, define ownership, data classification, consent requirements, retention expectations, access controls and change management. Decide who can create a new event, approve a new identity rule or publish an audience to an advertising destination.</p>
+
+      <p>Good governance does not only reduce risk. It makes delivery faster because teams know what “ready” means.</p>
+
+      <h2>7. Deliver a thin, complete slice</h2>
+
+      <p>A phased implementation should prove the full value chain rather than complete one technical layer at a time. One useful first slice is:</p>
+
+      <ol>
+        <li>Collect a small set of high-value behavioural events.</li>
+        <li>Connect anonymous and known behaviour using agreed identity rules.</li>
+        <li>Create one audience tied to a real business decision.</li>
+        <li>Activate it in one destination.</li>
+        <li>Measure data quality, operational reliability and business response.</li>
+      </ol>
+
+      <p>This produces evidence quickly. It also reveals the real work: inconsistent schemas, missing identifiers, unclear consent, destination limitations and ownership gaps. Those lessons should shape the next sprint.</p>
+
+      <h2>8. Measure the system and the outcome</h2>
+
+      <p>CDP success needs more than campaign performance. I would track three layers:</p>
+
+      <ul>
+        <li><strong>Data health:</strong> event completeness, schema compliance, identity coverage and duplicate rates.</li>
+        <li><strong>Operational health:</strong> source freshness, audience delivery, destination failures and time to launch.</li>
+        <li><strong>Business outcome:</strong> conversion, retention, suppression efficiency, customer experience or another use-case metric.</li>
+      </ul>
+
+      <p>Together, these measures show whether the platform is technically reliable, usable by teams and valuable to the business.</p>
+
+      <h2>The planning principle</h2>
+
+      <p>A successful CDP is not defined by how many systems it connects. It is defined by whether teams can use trusted, consent-aware customer data to make better decisions and create better experiences.</p>
+
+      <p>Start small, but design the foundations carefully. Prove one end-to-end outcome. Document the decisions and trade-offs. Then scale what works.</p>
+
+      <p class="article-end">This article reflects the product and implementation principles I use when working across customer data architecture, marketing activation, analytics and measurement.</p>
+    </article>
+    <section class="cta"><h2>Explore the implementation</h2><a class="button" href="index.html#projects">View my portfolio</a></section>
+  </main>
+  <footer class="footer">© 2026 Prabir Bera.</footer>
+</body>
+</html>

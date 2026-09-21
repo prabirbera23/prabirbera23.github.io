@@ -49,6 +49,12 @@
     @media(max-width:900px){.hero{grid-template-columns:1fr;padding:82px 24px 55px}.hero-copy{max-width:720px}.hero-stage{width:min(720px,100%);min-height:610px;margin:50px auto 0}.build-pill{margin-top:42px}.portrait-card{left:24%;width:55%}.capability-card{width:34%}}
     @media(max-width:600px){.hero{padding-top:60px}.hero h1{font-size:clamp(3rem,14vw,4rem)}.hero-lede{font-size:1.03rem}.hero-stage{min-height:720px}.portrait-card{left:8%;top:0;width:84%;height:64%}.capability-card{width:47%;min-height:185px;padding:19px}.capability-card.cdp{left:0;top:49%}.capability-card.ai{right:0;top:47%}.capability-card.analytics{right:1%;bottom:0}.cap-icon{width:52px;height:52px;border-radius:13px;margin-bottom:13px}.cap-icon svg{width:34px;height:34px}.capability-card h3{font-size:.78rem}.portrait-label{bottom:5%}}
   </style>
+  <style id="static-hero-artwork">
+    .hero-static{position:relative;width:100%;overflow:hidden;background:#0d0b1f}
+    .hero-static img{display:block;width:100%;height:auto}
+    .hero-static-cta{position:absolute;left:5.3%;top:66.3%;width:18.2%;height:9.7%;border-radius:10px}
+    .hero-static-cta:focus-visible{outline:3px solid #fff;outline-offset:4px}
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -60,31 +66,9 @@
     </div>
   </header>
   <main id="top" class="shell">
-    <section class="hero">
-      <div class="hero-copy">
-        <h1>Customer data.<br>Practical technology.<br>Measurable outcomes.</h1>
-        <p class="hero-lede">Marketing technology and product thinking across CDP, AI, automation and analytics.</p>
-        <a class="btn hero-cta" href="#projects">See selected work <span class="arrow" aria-hidden="true">→</span></a>
-        <div class="build-pill">Building in public</div>
-      </div>
-      <div class="hero-stage" aria-label="Prabir Bera's marketing technology focus areas">
-        <div class="portrait-card">
-          <img src="assets/prabir-hero-cutout.png" alt="Prabir Bera">
-          <div class="portrait-label"><strong>PRABIR BERA</strong><span>MarTech &nbsp;•&nbsp; Data &nbsp;•&nbsp; Product</span></div>
-        </div>
-        <div class="capability-card cdp">
-          <div class="cap-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 7 40 16 24 25 8 16 24 7Z" fill="#c4a2ff"/><path d="m8 23 16 9 16-9v6L24 38 8 29v-6Z" fill="#9b5cff"/><path d="m8 32 16 9 16-9v5L24 46 8 37v-5Z" fill="#7440e8"/></svg></div>
-          <h3>CDP<br>Architecture</h3><div class="cap-line"></div><div class="cap-bars"><i></i><i></i></div>
-        </div>
-        <div class="capability-card ai">
-          <div class="cap-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M21 7c1.7 8.2 5.8 12.3 14 14-8.2 1.7-12.3 5.8-14 14-1.7-8.2-5.8-12.3-14-14 8.2-1.7 12.3-5.8 14-14Z" fill="#70d3ff"/><path d="M38 6c.8 3.8 2.7 5.7 6.5 6.5C40.7 13.3 38.8 15.2 38 19c-.8-3.8-2.7-5.7-6.5-6.5C35.3 11.7 37.2 9.8 38 6Z" fill="#a9e7ff"/></svg></div>
-          <h3>AI<br>Workflows</h3><div class="cap-line"></div><div class="cap-bars"><i></i><i></i></div>
-        </div>
-        <div class="capability-card analytics">
-          <div class="cap-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="29" width="8" height="12" rx="2" fill="#e678dc"/><rect x="20" y="20" width="8" height="21" rx="2" fill="#ed8be4"/><rect x="32" y="10" width="8" height="31" rx="2" fill="#f4a3ec"/></svg></div>
-          <h3>Analytics &amp;<br>Measurement</h3><div class="cap-line"></div><div class="cap-bars"><i></i><i></i></div>
-        </div>
-      </div>
+    <section class="hero-static" aria-label="Prabir Bera — customer data, practical technology and measurable outcomes">
+      <img src="assets/prabir-hero-static.png" alt="Customer data. Practical technology. Measurable outcomes. Prabir Bera's marketing technology portfolio.">
+      <a class="hero-static-cta" href="#projects" aria-label="See selected work"></a>
     </section>
     <section class="about" id="about"><h2 class="section-heading">About Me</h2><p>I help teams connect marketing technology, customer data, analytics and measurement to create practical business value and better customer experiences.</p><a class="btn" href="#services">Learn More</a></section>
     <section class="section" id="articles"><h2 class="section-heading">Top Articles</h2><div class="articles">

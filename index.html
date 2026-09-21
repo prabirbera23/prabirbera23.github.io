@@ -40,6 +40,17 @@
     @media(max-width:820px){.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{min-height:610px;padding:80px 25px}.hero h1{font-size:clamp(3.25rem,13vw,5rem)}.hero-image{min-height:530px;clip-path:none}.hero:after{width:330px;height:330px;right:-80px;top:18%}.about{padding:82px 22px}.section,.resources-wrap,.creative{padding:90px 22px}.creative-grid{grid-template-columns:1fr;gap:38px}.creative-visual{height:390px}}
     @media(max-width:480px){.topbar{height:72px}.topbar .shell{height:72px}.brand-wordmark{font-size:1.55rem}.hero-copy{min-height:540px}.hero h1{font-size:3.2rem}.hero-image{min-height:410px}.hero-image img{width:205%;height:205%}.section-heading{font-size:2.8rem}.card{min-height:auto}.resource{height:260px}.creative-visual{height:290px}}
   </style>
+  <style id="portfolio-hero-v2">
+    .hero{display:grid;grid-template-columns:minmax(0,.92fr) minmax(620px,1.08fr);align-items:center;min-height:760px;padding:52px clamp(28px,5.4vw,96px);overflow:hidden;background:radial-gradient(circle at 67% 34%,rgba(103,59,230,.25),transparent 25%),linear-gradient(rgba(255,255,255,.026) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.026) 1px,transparent 1px),#0d0b1f;background-size:auto,70px 70px,70px 70px,auto}
+    .hero:after{display:none}.hero-copy{padding:0;display:block;z-index:4}.hero h1{max-width:760px;margin:0 0 26px;font-size:clamp(3.25rem,5vw,5.4rem);line-height:1.02;letter-spacing:-.058em}.hero-lede{max-width:690px;margin:0 0 38px;color:#bdb7d3;font-size:clamp(1.05rem,1.55vw,1.45rem);line-height:1.55}.hero-cta{gap:12px;padding:18px 28px}.hero-cta .arrow{font-size:1.4rem;margin-left:17px;transition:transform .2s}.hero-cta:hover .arrow{transform:translateX(5px)}.build-pill{display:inline-flex;align-items:center;gap:12px;margin-top:76px;padding:12px 20px;border:1px solid rgba(60,219,224,.4);border-radius:999px;color:#c8c3dc;font-size:.7rem;font-weight:800;letter-spacing:.19em;text-transform:uppercase}.build-pill:before{content:"";width:11px;height:11px;border-radius:50%;background:#37e6dc;box-shadow:0 0 18px #37e6dc;animation:statusPulse 2.6s ease-in-out infinite}
+    .hero-stage{position:relative;min-height:650px;z-index:3}.hero-stage:before{content:"";position:absolute;inset:5% 3% 3% 7%;border:1px solid rgba(136,91,255,.25);border-radius:26px;transform:translate(24px,18px)}.portrait-card{position:absolute;left:25%;top:2%;width:54%;height:93%;border:1px solid #8f67ff;border-radius:28px;overflow:hidden;background:radial-gradient(circle at 50% 16%,#aca4d1 0,#5e568f 38%,#372062 72%,#1a1236 100%);box-shadow:0 0 44px rgba(111,65,238,.35);z-index:2}.portrait-card:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(23,11,55,.82));pointer-events:none}.portrait-card img{position:absolute;width:118%;height:auto;left:-10%;bottom:0;filter:saturate(.76) contrast(1.05);z-index:1}.portrait-label{position:absolute;left:11%;right:9%;bottom:7%;z-index:3;border-left:4px solid #ec6bd9;padding-left:18px}.portrait-label strong{display:block;font-size:.9rem;letter-spacing:.22em}.portrait-label span{display:block;margin-top:8px;color:#b8add3;font-size:.61rem;letter-spacing:.3em;text-transform:uppercase}
+    .capability-card{position:absolute;width:34%;min-height:220px;padding:28px 30px;border:1px solid #7046d9;border-radius:20px;background:linear-gradient(145deg,rgba(35,27,76,.96),rgba(16,15,48,.98));box-shadow:0 18px 55px rgba(2,2,20,.4);z-index:4;will-change:transform;transition:box-shadow .25s,border-color .25s}.capability-card:hover{border-color:#a984ff;box-shadow:0 24px 70px rgba(96,53,218,.45)}.capability-card.cdp{left:0;top:9%;animation:floatCDP 5.6s ease-in-out infinite}.capability-card.ai{right:0;top:23%;border-color:#3d85d8;animation:floatAI 6.2s ease-in-out .65s infinite}.capability-card.analytics{right:2%;bottom:4%;border-color:#824bc9;animation:floatAnalytics 5.9s ease-in-out 1.15s infinite}.cap-icon{width:74px;height:74px;border-radius:17px;display:grid;place-items:center;margin-bottom:16px;background:linear-gradient(145deg,#322169,#201743);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}.ai .cap-icon{background:linear-gradient(145deg,#132f59,#14203e)}.analytics .cap-icon{background:linear-gradient(145deg,#51215b,#2c173d)}.cap-icon svg{width:43px;height:43px}.capability-card h3{margin:0;color:#fff;font-size:1.06rem;line-height:1.18;letter-spacing:.045em;text-transform:uppercase}.cap-line{width:54px;height:4px;margin-top:20px;border-radius:5px;background:#9a61ff}.ai .cap-line{background:#61cfff}.analytics .cap-line{background:#eb76dc}.cap-bars{display:flex;flex-direction:column;gap:8px;margin-top:14px}.cap-bars i{display:block;height:8px;border-radius:9px;background:#46406d}.cap-bars i:first-child{width:88%}.cap-bars i:last-child{width:57%}
+    @keyframes floatCDP{0%,100%{transform:translate3d(0,0,0) rotate(-.3deg)}50%{transform:translate3d(0,-13px,0) rotate(.4deg)}}@keyframes floatAI{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-8px,-10px,0)}}@keyframes floatAnalytics{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-14px,0)}}@keyframes statusPulse{0%,100%{opacity:.65;transform:scale(.86)}50%{opacity:1;transform:scale(1.08)}}
+    @media(max-width:1180px){.hero{grid-template-columns:minmax(0,.9fr) minmax(520px,1.1fr);padding-left:42px;padding-right:42px}.hero-stage{min-height:590px}.capability-card{min-height:190px;padding:22px}.cap-icon{width:62px;height:62px}.capability-card h3{font-size:.9rem}.portrait-card{left:23%;width:57%}}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding:82px 24px 55px}.hero-copy{max-width:720px}.hero-stage{width:min(720px,100%);min-height:610px;margin:50px auto 0}.build-pill{margin-top:42px}.portrait-card{left:24%;width:55%}.capability-card{width:34%}}
+    @media(max-width:600px){.hero{padding-top:60px}.hero h1{font-size:clamp(3rem,14vw,4rem)}.hero-lede{font-size:1.03rem}.hero-stage{min-height:720px}.portrait-card{left:8%;top:0;width:84%;height:64%}.capability-card{width:47%;min-height:185px;padding:19px}.capability-card.cdp{left:0;top:49%}.capability-card.ai{right:0;top:47%}.capability-card.analytics{right:1%;bottom:0}.cap-icon{width:52px;height:52px;border-radius:13px;margin-bottom:13px}.cap-icon svg{width:34px;height:34px}.capability-card h3{font-size:.78rem}.portrait-label{bottom:5%}}
+    @media(prefers-reduced-motion:reduce){.capability-card,.build-pill:before{animation:none!important}.hero-cta .arrow{transition:none}}
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -52,8 +63,30 @@
   </header>
   <main id="top" class="shell">
     <section class="hero">
-      <div class="hero-copy"><h1>Marketing Technology.<br>Customer Data.<br>Analytics.<br>Measurement.</h1><a class="btn" href="#articles">Blog</a></div>
-      <div class="hero-image"><img src="assets/prabir-profile-source.png" alt="Prabir Bera"></div>
+      <div class="hero-copy">
+        <h1>Customer data.<br>Practical technology.<br>Measurable outcomes.</h1>
+        <p class="hero-lede">Marketing technology and product thinking across CDP, AI, automation and analytics.</p>
+        <a class="btn hero-cta" href="#projects">See selected work <span class="arrow" aria-hidden="true">→</span></a>
+        <div class="build-pill">Building in public</div>
+      </div>
+      <div class="hero-stage" aria-label="Prabir Bera's marketing technology focus areas">
+        <div class="portrait-card">
+          <img src="assets/prabir-hero-cutout.png" alt="Prabir Bera">
+          <div class="portrait-label"><strong>PRABIR BERA</strong><span>MarTech &nbsp;•&nbsp; Data &nbsp;•&nbsp; Product</span></div>
+        </div>
+        <div class="capability-card cdp">
+          <div class="cap-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 7 40 16 24 25 8 16 24 7Z" fill="#c4a2ff"/><path d="m8 23 16 9 16-9v6L24 38 8 29v-6Z" fill="#9b5cff"/><path d="m8 32 16 9 16-9v5L24 46 8 37v-5Z" fill="#7440e8"/></svg></div>
+          <h3>CDP<br>Architecture</h3><div class="cap-line"></div><div class="cap-bars"><i></i><i></i></div>
+        </div>
+        <div class="capability-card ai">
+          <div class="cap-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M21 7c1.7 8.2 5.8 12.3 14 14-8.2 1.7-12.3 5.8-14 14-1.7-8.2-5.8-12.3-14-14 8.2-1.7 12.3-5.8 14-14Z" fill="#70d3ff"/><path d="M38 6c.8 3.8 2.7 5.7 6.5 6.5C40.7 13.3 38.8 15.2 38 19c-.8-3.8-2.7-5.7-6.5-6.5C35.3 11.7 37.2 9.8 38 6Z" fill="#a9e7ff"/></svg></div>
+          <h3>AI<br>Workflows</h3><div class="cap-line"></div><div class="cap-bars"><i></i><i></i></div>
+        </div>
+        <div class="capability-card analytics">
+          <div class="cap-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="29" width="8" height="12" rx="2" fill="#e678dc"/><rect x="20" y="20" width="8" height="21" rx="2" fill="#ed8be4"/><rect x="32" y="10" width="8" height="31" rx="2" fill="#f4a3ec"/></svg></div>
+          <h3>Analytics &amp;<br>Measurement</h3><div class="cap-line"></div><div class="cap-bars"><i></i><i></i></div>
+        </div>
+      </div>
     </section>
     <section class="about" id="about"><h2 class="section-heading">About Me</h2><p>I help teams connect marketing technology, customer data, analytics and measurement to create practical business value and better customer experiences.</p><a class="btn" href="#services">Learn More</a></section>
     <section class="section" id="articles"><h2 class="section-heading">Top Articles</h2><div class="articles">

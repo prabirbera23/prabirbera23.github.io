@@ -61,11 +61,12 @@
     .pbhero__visual{position:relative;z-index:3;min-height:630px}
     .pbhero__frame{position:absolute;inset:5% 1% 3% 12%;border:1px solid rgba(118,75,226,.35);border-radius:28px}
     .pbhero__frame:after{content:"";position:absolute;right:9%;top:8%;width:11px;height:11px;border-radius:2px;background:#56d6f4;box-shadow:0 0 14px rgba(86,214,244,.8)}
-    .pbhero__portrait{position:absolute;z-index:2;left:29%;top:0;width:53%;height:96%;overflow:hidden;border:2px solid #8e60ff;border-radius:29px;background:linear-gradient(155deg,#9588c7 0,#5b4d8b 38%,#2c1951 73%,#17112e);box-shadow:0 0 45px rgba(117,66,245,.38)}
+    .pbhero__portrait{position:absolute;z-index:2;left:29%;top:0;width:53%;height:96%;overflow:hidden;border:0;border-radius:29px;background:transparent;box-shadow:0 0 45px rgba(117,66,245,.38)}
     .pbhero__portrait:after{display:none}
-    .pbhero__portrait img{position:absolute;z-index:1;left:-12%;bottom:-1%;width:124%;max-width:none;height:auto;display:block}
+    .pbhero__portrait img{position:absolute;z-index:1;inset:0;width:100%;height:100%;max-width:none;object-fit:fill;display:block}
     .pbhero__name{position:absolute;z-index:3;left:10%;right:8%;bottom:7%;padding-left:18px;border-left:4px solid #ef69db}
     .pbhero__name strong{display:block;font-size:.88rem;letter-spacing:.23em}
+    .pbhero__portrait .pbhero__name{display:none}
     .pbhero__name small{display:block;margin-top:8px;color:#beb3db;font-size:.58rem;letter-spacing:.32em;text-transform:uppercase}
     .pbhero-card{position:absolute;z-index:5;width:34%;min-height:214px;padding:27px 29px;border:1px solid #7146db;border-radius:20px;background:linear-gradient(145deg,rgba(36,27,78,.98),rgba(16,15,48,.99));box-shadow:0 20px 55px rgba(0,0,20,.42)}
     .pbhero-card--cdp{left:0;top:8%}.pbhero-card--ai{right:0;top:21%;border-color:#3f86db}.pbhero-card--analytics{right:1.5%;bottom:1%;border-color:#864ed1}
@@ -115,7 +116,7 @@
       <div class="pbhero__visual" aria-label="Prabir Bera and three marketing technology focus areas">
         <div class="pbhero__frame" aria-hidden="true"></div>
         <div class="pbhero__portrait">
-          <img src="assets/prabir-hero-cutout.png" alt="Prabir Bera">
+          <img src="assets/prabir-portrait-card.png" alt="Prabir Bera">
           <div class="pbhero__name"><strong>PRABIR BERA</strong><small>MarTech &nbsp;•&nbsp; Data &nbsp;•&nbsp; Product</small></div>
         </div>
         <article class="pbhero-card pbhero-card--cdp">
